@@ -1,0 +1,24 @@
+{
+  "name": "nodejs-express",
+  "version": "1.0.0",
+  "description": "Projeto JS-35 Caelum",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/theleoon/nodejs-express.git"
+  },
+  "keywords": [
+    "js",
+    "node",
+    "caelum"
+  ],
+  "author": "Leonardo Silva",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/theleoon/nodejs-express/issues"
+  },
+  "homepage": "https://github.com/theleoon/nodejs-express#readme"
+}
