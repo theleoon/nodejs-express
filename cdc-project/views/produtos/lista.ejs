@@ -4,9 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Lista de Produtos</title>
+    <title>Lista de Livros</title>
 </head>
 <body>
-    <h2>Home Page - Direto do HTML</h2>
+    <h2>Lista de Livros</h2>
+
+    <table class="table table-condensed table-bordered table-striped table-hover">
+        <thead>
+            <tr>
+                <td>Titulo</td>
+            </tr>
+                <td>Preco</td>
+                <td>Descricao</td>
+            </thead>
+        <tbody>
+        <% for(let i=0; i<lista.length; i++) {%>
+        <tr>
+            <td><%= lista[i].titulo %></td>
+            <td><%= lista[i].preco %></td>
+            <td><p><%= lista[i].descricao%></p></td>
+        </tr>
+        <% } %>
+        </tbody>
+    </table>
+
+
 </body>
 </html>
