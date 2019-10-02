@@ -6,6 +6,9 @@ app.set('view engine', 'ejs'); // EJS como motor de visualização
 
 require('./routes/produtos')(app);
 
+// habilita os arquivos staticos no express
+app.use(express.static('./public'));
+
 app.listen(porta, function(){
     console.log("Servidor funcionando!", porta);
 });

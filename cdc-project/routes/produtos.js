@@ -1,4 +1,5 @@
 const connectionFactory = require('../infra/createDBConection');
+const ProdutoDao = require('../infra/ProdutoDao');
 
 module.exports = function(app) {
 
@@ -6,13 +7,13 @@ module.exports = function(app) {
         console.log('Chamando /produtos');
 
         const conn = connectionFactory();
-
-        conn.query('select * from livros', function(err, result){
-            console.log(result);
+        const produtoDao = new ProdutoDao(conn);
+ 
+    produtoDao.lista(function(err, results, fields){
             res.render('produtos/lista', {
-                lista: result
+                lista: results
             });
-        });
+        })
         conn.end();
     });
     

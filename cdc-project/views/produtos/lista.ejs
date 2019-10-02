@@ -1,33 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Lista de Livros</title>
-</head>
-<body>
-    <h2>Lista de Livros</h2>
+<% include ../includes/header.ejs %>
 
-    <table class="table table-condensed table-bordered table-striped table-hover">
-        <thead>
-            <tr>
-                <td>Titulo</td>
-            </tr>
-                <td>Preco</td>
-                <td>Descricao</td>
-            </thead>
-        <tbody>
-        <% for(let i=0; i<lista.length; i++) {%>
-        <tr>
-            <td><%= lista[i].titulo %></td>
-            <td><%= lista[i].preco %></td>
-            <td><p><%= lista[i].descricao%></p></td>
-        </tr>
-        <% } %>
-        </tbody>
-    </table>
+    <div>
+        <div class ="container min-container">
+           
+            <table class="table table-condensed table-bordered table-striped table-hover">
+                <thead>
+                    <tr>
+                        <td>Titulo</td>
+                        <td>Preco</td>
+                        <td>Descricao</td>
+                    </tr>
+                    </thead>
+                <tbody>
+                <% for(let i=0; i<lista.length; i++) {%>
+                <tr>
+                    <td><%= lista[i].titulo %></td>
+                    <td><%= lista[i].preco %></td>
+                    <td><p><%= lista[i].descricao%></p></td>
+                </tr>
+                <% } %>
+                </tbody>
+            </table>
+           
+           <a href="/produtos/form" class="btn btn-success"><span class="glyphicon glyphicon-plus-sign"></span> Novo livro</a>
+        </div>
+    </div>
 
-
-</body>
-</html>
+<% include ../includes/footer.ejs %>
